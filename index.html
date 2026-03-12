@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Travel Planner</title>
+
+<link rel="stylesheet" href="style.css"/>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+
+</head>
+
+<body class="bg-gray-100">
+
+<header class="bg-blue-600 text-white p-6 text-center">
+<h1 class="text-3xl font-bold">🌍 Travel Planner</h1>
+<p>Plan smarter trips</p>
+</header>
+
+<div class="container mx-auto p-6 grid md:grid-cols-2 gap-6">
+
+<div class="bg-white p-6 rounded shadow">
+
+<h2 class="text-xl font-bold mb-4">Plan a Trip</h2>
+
+<input id="destination" class="input" placeholder="Destination"/>
+
+<input id="date" type="date" class="input"/>
+
+<textarea id="notes" class="input" placeholder="Notes"></textarea>
+
+<button onclick="addTrip()" class="btn">Add Trip</button>
+
+<div id="weather" class="mt-4 text-sm text-gray-600"></div>
+
+</div>
+
+<div class="bg-white p-6 rounded shadow">
+
+<h2 class="text-xl font-bold mb-4">Your Trips</h2>
+
+<div id="tripList"></div>
+
+</div>
+
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+<script src="config.js"></script>
+<script src="storage.js"></script>
+<script src="api.js"></script>
+<script src="map.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
